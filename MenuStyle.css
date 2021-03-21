@@ -14,8 +14,17 @@ h3{
     text-decoration: underline;
 }
 
+.food{
+    padding-left: 35%;
+}
+
+.fdetails{
+    padding-left: 40%;
+}
+
 #head{
     border: 3px solid black;
+    text-align: center;
 }
 
 #Apps{
@@ -39,9 +48,11 @@ h3{
 }
 
 #sides{
+    text-align: center;
     border: 3px solid black;
 }
 
 #drinks{
+    text-align: center;
     border: 3px solid black;
 }
