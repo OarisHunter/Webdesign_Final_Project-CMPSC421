@@ -1,7 +1,17 @@
 body{
     background-image: linear-gradient(#ffdf7e, #ffb114);
     border: 5px solid black;
-    font-family: "Comic Sans MS";
+    font-family: Luminari, fantasy;
+}
+h1{
+    font-size: xxx-large;
+    text-align: center;
+    text-decoration: underline;
+}
+
+h3{
+    text-align: center;
+    text-decoration: underline;
 }
 
 #head{
