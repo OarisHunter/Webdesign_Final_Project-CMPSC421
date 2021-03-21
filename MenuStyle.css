@@ -1,5 +1,37 @@
 body{
     background-image: linear-gradient(#ffdf7e, #ffb114);
+    border: 5px solid black;
+    font-family: "Comic Sans MS";
+}
 
-    font-family: "Droid Sans Mono";
+#head{
+    border: 3px solid black;
+}
+
+#Apps{
+    border: 3px solid black;
+}
+
+#Healthy{
+    border: 3px solid black;
+}
+
+#Entrees{
+    border: 3px solid black;
+}
+
+#Sandwich{
+    border: 3px solid black;
+}
+
+#Seafood{
+    border: 3px solid black;
+}
+
+#sides{
+    border: 3px solid black;
+}
+
+#drinks{
+    border: 3px solid black;
 }
