@@ -7,14 +7,18 @@ body {
     background-size: cover;
 }
 
-h1, p {
+h1 {
+    font-size: 48px;
     text-align: center;
     color: antiquewhite;
     text-shadow: -2px 0 black, 2px 0 black, 0 -2px black, 0 2px black;
 }
 
 p {
-    font-size: large;
+    font-size: 24px;
+    text-align: center;
+    color: antiquewhite;
+    text-shadow: -2px 0 black, 2px 0 black, 0 -2px black, 0 2px black;
 }
 
 .category_list {
@@ -41,6 +45,6 @@ p {
     top: -2.5em;
     margin-left: 15%;
     font-size: larger;
-    color: white;
+    color: antiquewhite;
     text-shadow: -2px 0 black, 2px 0 black, 0 -2px black, 0 2px black;
 }
