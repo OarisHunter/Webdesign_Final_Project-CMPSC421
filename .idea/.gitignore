@@ -3,3 +3,7 @@
 /workspace.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+/.gitignore
+/CMPSC421_Final_Project.iml
+/modules.xml
+/vcs.xml
