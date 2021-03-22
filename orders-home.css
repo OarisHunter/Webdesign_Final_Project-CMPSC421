@@ -7,10 +7,14 @@ body {
     background-size: cover;
 }
 
-h1 {
+h1, p {
     text-align: center;
     color: antiquewhite;
     text-shadow: -2px 0 black, 2px 0 black, 0 -2px black, 0 2px black;
+}
+
+p {
+    font-size: large;
 }
 
 .category_list {
