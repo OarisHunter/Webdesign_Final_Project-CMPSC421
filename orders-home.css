@@ -14,11 +14,26 @@ h1 {
     text-shadow: -2px 0 black, 2px 0 black, 0 -2px black, 0 2px black;
 }
 
+h2 {
+    font-size: 36px;
+    text-align: center;
+    color: antiquewhite;
+    text-shadow: -2px 0 black, 2px 0 black, 0 -2px black, 0 2px black;
+}
+
 p {
     font-size: 24px;
     text-align: center;
     color: antiquewhite;
     text-shadow: -2px 0 black, 2px 0 black, 0 -2px black, 0 2px black;
+}
+
+div {
+    background-color: darkred;
+    border-style: solid;
+    border-color: white;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .category_list {
@@ -27,10 +42,6 @@ p {
     flex-direction: row;
 
     justify-content: center;
-
-    background-color: darkred;
-    border-style: solid;
-    border-color: white;
 }
 
 .category_img {
