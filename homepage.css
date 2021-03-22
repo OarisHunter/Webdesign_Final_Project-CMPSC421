@@ -1,5 +1,32 @@
+body {
+    background-image: url("tots.jpg");
+    background-size: cover;
+}
+
 #tot_header {
+    font-family: Luminari, fantasy;
     text-align: center;
-    font-family: "Comic Sans MS", sans-serif;
-    font-size: 50px;
+    font-size: 75px;
+    color: white;
+    text-shadow: -1px 0 black, 1px 0 black, 0 -1px black, 0 1px black;
+}
+
+#navigation {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: darkred;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+div p {
+    display: block;
+    font-family: Luminari, fantasy;
+    background-color: antiquewhite;
+    text-align: center;
+    padding: 13px;
+}
+
+p:hover {
+    background-color: white;
 }
