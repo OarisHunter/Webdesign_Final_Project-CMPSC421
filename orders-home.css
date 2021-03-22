@@ -2,30 +2,34 @@
 body {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /*align-items: center;*/
+    background-image: url("./images/tots.jpg");
+    background-size: cover;
 }
 
 h1 {
     text-align: center;
+    color: antiquewhite;
+    text-shadow: -2px 0 black, 2px 0 black, 0 -2px black, 0 2px black;
 }
 
 .category_list {
     list-style-type: none;
-
-    align-self: center;
     display: flex;
     flex-direction: row;
 
-    align-items: center;
-    margin-right: auto;
-    margin-left: auto;
+    justify-content: center;
+
+    background-color: darkred;
+    border-style: solid;
+    border-color: white;
 }
 
 .category_img {
     display: block;
     max-width: 160px;
     max-height: 160px;
-    padding: 10px;
+    padding: 20px;
 }
 
 .category_text {
@@ -33,6 +37,6 @@ h1 {
     top: -2.5em;
     margin-left: 15%;
     font-size: larger;
-    color: white;
-    text-shadow: -1px 0 black, 1px 0 black, 0 -1px black, 0 1px black;
+    color: antiquewhite;
+    text-shadow: -2px 0 black, 2px 0 black, 0 -2px black, 0 2px black;
 }
