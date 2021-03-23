@@ -1,5 +1,22 @@
 body{
     background-image: url("https://cdn.discordapp.com/attachments/808443370736320523/823596944227041390/tots.jpg");
     font-family:  Luminari, fantasy;
-    color: white;
+
+}
+nav {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: darkred;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+ p {
+    display: block;
+    font-family: Luminari, fantasy;
+    background-color: antiquewhite;
+    text-align: center;
+    padding: 13px;
+}
+p:hover {
+    background-color: white;
 }
