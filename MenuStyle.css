@@ -4,7 +4,8 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     font-family: Luminari, fantasy;
-    color: white;
+    color: antiquewhite;
+    text-shadow: -1px 0 black, 2px 0 black, 0 -2px black, 0 2px black;
 }
 
 h1{
