@@ -10,13 +10,14 @@ nav {
     padding-left: 16px;
     padding-right: 16px;
 }
- p {
+.nav_bar {
     display: block;
     font-family: Luminari, fantasy;
     background-color: antiquewhite;
     text-align: center;
     padding: 13px;
+
 }
-p:hover {
+.nav_bar:hover {
     background-color: white;
 }
