@@ -8,6 +8,40 @@ body{
     text-shadow: -1px 0 black, 2px 0 black, 0 -2px black, 0 2px black;
 }
 
+
+
+#tot_header {
+    font-family: Luminari, fantasy;
+    text-align: center;
+    font-size: 75px;
+    color: white;
+}
+
+#navigation {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: darkred;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.nav_items {
+    display: block;
+    font-family: Luminari, fantasy;
+    background-color: antiquewhite;
+    text-shadow: -1px 0 black, 1px 0 black, 0 -1px black, 0 1px black;
+    color: white;
+    text-align: center;
+    padding: 13px;
+}
+
+.nav_items:hover {
+    background-color: white;
+}
+
+
+
+
 .menu{
     display: flex;
     flex-direction: column;
@@ -16,10 +50,9 @@ body{
     margin-left: auto;
 }
 
-h1{
+#menuhead{
     font-size: xxx-large;
     text-align: center;
-    text-decoration: underline;
 }
 
 h3{
@@ -29,10 +62,12 @@ h3{
 
 .food{
     padding-left: 20%;
+    padding-right: 20%;
 }
 
 .fdetails{
     padding-left: 25%;
+    padding-right: 20%;
 }
 
 #head{
@@ -118,4 +153,15 @@ h3{
     margin-right: 20%;
     margin-left: 20%;
     margin-bottom: 2%;
+}
+
+#contact_info {
+    width: 160px;
+    margin: 0 auto;
+}
+
+.contact {
+    text-align: center;
+    color: white;
+    text-shadow: -1px 0 black, 2px 0 black, 0 -1px black, 0 2px black;
 }
