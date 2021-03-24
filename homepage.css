@@ -1,5 +1,5 @@
 body {
-    background-image: url("tots.jpg");
+    background-image: url("tot.jpg");
     background-size: cover;
 }
 
@@ -8,7 +8,7 @@ body {
     text-align: center;
     font-size: 75px;
     color: white;
-    text-shadow: -1px 0 black, 1px 0 black, 0 -1px black, 0 1px black;
+    text-shadow: -1px 0 black, 2px 0 black, 0 -1px black, 0 2px black;
 }
 
 #navigation {
@@ -19,14 +19,62 @@ body {
     padding-right: 16px;
 }
 
-div p {
+.nav_items {
     display: block;
     font-family: Luminari, fantasy;
     background-color: antiquewhite;
+    text-shadow: -1px 0 black, 2px 0 black, 0 -1px black, 0 2px black;
+    color: white;
     text-align: center;
     padding: 13px;
 }
 
-p:hover {
+.nav_items:hover {
     background-color: white;
+}
+
+/* change up to slideshow */
+.tot_list {
+    overflow: scroll;
+
+    display: flex;
+    list-style-type: none;
+
+    align-items: center;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+
+    background: darkred;
+    padding: 16px;
+}
+
+.tot_item {
+    border: 8px solid antiquewhite;
+    width: 300px;
+    height: 300px;
+}
+
+.tot_pic {
+    width: 300px;
+    height: 300px;
+}
+
+#contact_info {
+    width: 160px;
+    margin: 0 auto;
+}
+
+.contact {
+    font-family: Luminari, fantasy;
+    text-align: center;
+    color: white;
+    text-shadow: -1px 0 black, 2px 0 black, 0 -1px black, 0 2px black;
+}
+
+#location {
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
 }
