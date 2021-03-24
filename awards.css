@@ -25,8 +25,9 @@ nav {
     font-family: Luminari, fantasy;
     background-color: antiquewhite;
     text-align: center;
+    color: white;
+    text-shadow: -1px 0 black, 2px 0 black, 0 -1px black, 0 2px black;
     padding: 13px;
-
 }
 .nav_bar:hover {
     background-color: white;
