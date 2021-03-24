@@ -36,8 +36,11 @@ h3{
 }
 
 #head{
-    border: 10px solid darkred;
-    background: antiquewhite;
+    border-bottom: 3px solid antiquewhite;
+    border-top: 10px solid antiquewhite;
+    border-right: 10px solid antiquewhite;
+    border-left: 10px solid antiquewhite;
+    background: darkred;
     text-align: center;
     margin-right: 20%;
     margin-left: 20%;
@@ -45,45 +48,73 @@ h3{
 }
 
 #Apps{
-    border: 3px solid black;
+    border-bottom: 3px solid antiquewhite;
+    border-top: 3px solid antiquewhite;
+    border-right: 10px solid antiquewhite;
+    border-left: 10px solid antiquewhite;
+    background: darkred;
     margin-right: 20%;
     margin-left: 20%;
 }
 
 #Healthy{
-    border: 3px solid black;
+    border-bottom: 3px solid antiquewhite;
+    border-top: 3px solid antiquewhite;
+    border-right: 10px solid antiquewhite;
+    border-left: 10px solid antiquewhite;
+    background: darkred;
     margin-right: 20%;
     margin-left: 20%;
 }
 
 #Entrees{
-    border: 3px solid black;
+    border-bottom: 3px solid antiquewhite;
+    border-top: 3px solid antiquewhite;
+    border-right: 10px solid antiquewhite;
+    border-left: 10px solid antiquewhite;
+    background: darkred;
     margin-right: 20%;
     margin-left: 20%;
 }
 
 #Sandwich{
-    border: 3px solid black;
+    border-bottom: 3px solid antiquewhite;
+    border-top: 3px solid antiquewhite;
+    border-right: 10px solid antiquewhite;
+    border-left: 10px solid antiquewhite;
+    background: darkred;
     margin-right: 20%;
     margin-left: 20%;
 }
 
 #Seafood{
-    border: 3px solid black;
+    border-bottom: 3px solid antiquewhite;
+    border-top: 3px solid antiquewhite;
+    border-right: 10px solid antiquewhite;
+    border-left: 10px solid antiquewhite;
+    background: darkred;
     margin-right: 20%;
     margin-left: 20%;
 }
 
 #sides{
     text-align: center;
-    border: 3px solid black;
+    border-bottom: 3px solid antiquewhite;
+    border-top: 3px solid antiquewhite;
+    border-right: 10px solid antiquewhite;
+    border-left: 10px solid antiquewhite;
+    background: darkred;
     margin-right: 20%;
     margin-left: 20%;
 }
 
 #drinks{
     text-align: center;
-    border: 3px solid black;
+    border-bottom: 10px solid antiquewhite;
+    border-top: 3px solid antiquewhite;
+    border-right: 10px solid antiquewhite;
+    border-left: 10px solid antiquewhite;
+    background: darkred;
     margin-right: 20%;
     margin-left: 20%;
     margin-bottom: 2%;
