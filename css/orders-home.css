@@ -8,13 +8,16 @@ body {
 }
 
 h1 {
+    font-family: Luminari, fantasy;
     font-size: 48px;
     text-align: center;
-    color: antiquewhite;
+    color: white;
     text-shadow: -2px 0 black, 2px 0 black, 0 -2px black, 0 2px black;
+    margin: unset;
 }
 
 h2 {
+    font-family: Luminari, fantasy;
     font-size: 36px;
     text-align: center;
     color: antiquewhite;
@@ -22,24 +25,73 @@ h2 {
 }
 
 p {
+    font-family: Luminari, fantasy;
     font-size: 24px;
     text-align: center;
     color: antiquewhite;
     text-shadow: -2px 0 black, 2px 0 black, 0 -2px black, 0 2px black;
 }
 
-div {
+section {
     background-color: darkred;
     border-style: solid;
     border-color: white;
-    margin-left: auto;
-    margin-right: auto;
+}
+
+section div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#tot_header {
+    font-family: Luminari, fantasy;
+    text-align: center;
+    font-size: 75px;
+    color: white;
+    text-shadow: -1px 0 black, 2px 0 black, 0 -1px black, 0 2px black;
+}
+
+#order_categories {
+    margin: auto;
+}
+
+.topnav {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    background-color: darkred;
+    /*padding-left: 16px;*/
+    /*padding-right: 16px;*/
+    padding: 16px;
+}
+
+.topnav a {
+    display: block;
+    font-family: Luminari, fantasy;
+    background-color: antiquewhite;
+    text-shadow: -1px 0 black, 2px 0 black, 0 -1px black, 0 2px black;
+    color: white;
+    text-align: center;
+    padding: 13px;
+    font-size: large;
+}
+
+.topnav a:hover {
+    background-color: white;
+}
+
+.topnav a.active_page {
+    background-color: white;
+    font-size: larger;
 }
 
 .category_list {
+    padding: 0;
+
     list-style-type: none;
     display: flex;
     flex-direction: row;
+    overflow: hidden;
 
     justify-content: center;
 }
@@ -51,10 +103,16 @@ div {
     padding: 20px;
 }
 
+li img:hover {
+    background-color: antiquewhite;
+}
+
 .category_text {
     position: relative;
     top: -2.5em;
     margin-left: 15%;
+
+    font-family: Luminari, fantasy;
     font-size: larger;
     color: antiquewhite;
     text-shadow: -2px 0 black, 2px 0 black, 0 -2px black, 0 2px black;
