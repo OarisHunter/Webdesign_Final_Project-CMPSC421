@@ -78,11 +78,13 @@ section div {
 
 .topnav a:hover {
     background-color: white;
+    color: antiquewhite;
 }
 
 .topnav a.active_page {
     background-color: white;
     font-size: larger;
+    color: antiquewhite;
 }
 
 .category_list {
