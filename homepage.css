@@ -13,10 +13,9 @@ body {
 
 #navigation {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 33% 34% 33%;
     background-color: darkred;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 16px;
 }
 
 .nav_items {
@@ -33,31 +32,37 @@ body {
     background-color: white;
 }
 
-/* change up to slideshow */
-.tot_list {
-    overflow: scroll;
+.main_body {
+    display: grid;
+    grid-template-columns: 25% auto 25%;
+}
 
-    display: flex;
-    list-style-type: none;
+.quotes {
+    font-family: Luminari, fantasy;
+    text-align: center;
+    font-style: italic;
+    margin-top: 40%;
+    font-size: 50px;
+    color: white;
+    text-shadow: -1px 0 black, 2px 0 black, 0 -1px black, 0 2px black;
+}
 
-    align-items: center;
-    width: 90%;
-    margin-right: auto;
-    margin-left: auto;
-
-    background: darkred;
-    padding: 16px;
+.tots_slideshow {
+    padding: 32px 16px;
+    height: 500px;
+    width: 500px;
+    margin: 0 auto;
 }
 
 .tot_item {
-    border: 8px solid antiquewhite;
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
 }
 
 .tot_pic {
-    width: 300px;
-    height: 300px;
+    border: 16px solid darkred;
+    width: 100%;
+    height: 100%;
 }
 
 #contact_info {
