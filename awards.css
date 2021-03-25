@@ -17,8 +17,8 @@ nav {
     display: grid;
     grid-template-columns: auto auto auto;
     background-color: darkred;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 16px;
+
 }
 .nav_bar {
     display: block;
@@ -40,7 +40,7 @@ nav {
     color: white;
 
 }
-p span {
+a span {
     background-color: darkred;
 }
 
