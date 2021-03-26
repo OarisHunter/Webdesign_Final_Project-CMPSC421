@@ -83,7 +83,7 @@ section div {
 
 .topnav a.active_page {
     background-color: white;
-    font-size: larger;
+    font-size: x-large;
     color: antiquewhite;
 }
 
