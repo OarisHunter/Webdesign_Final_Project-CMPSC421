@@ -35,9 +35,10 @@ nav {
 
 #points_label
 {
-   text-align: right;
-
+    font-family: Luminari, fantasy;
+    text-align: right;
     color: white;
+    text-shadow: -1px 0 black, 2px 0 black, 0 -1px black, 0 2px black;
 
 }
 p span {
@@ -49,8 +50,8 @@ table  {
 
     border: 1px solid white;
     background-color: darkred;
-
-  margin-top:100px;
+    font-family: Luminari, fantasy;
+    margin-top:100px;
     margin-left: 500px;
     margin-right: auto;
     color: white;
@@ -69,6 +70,13 @@ caption {
 }
 #login{
     float: right;
+    padding-right: 30px;
 
+}
+
+label{
+    background-color: darkred;
+    color: white;
+    text-shadow: -1px 0 black, 2px 0 black, 0 -1px black, 0 2px black;
 
 }
