@@ -5,6 +5,7 @@ body {
     /*align-items: center;*/
     background-image: url("../images/tots.jpg");
     background-size: cover;
+    background-attachment: fixed;
 }
 
 h1 {
@@ -54,6 +55,12 @@ section div {
 
 #order_categories {
     margin: auto;
+}
+
+#order_menu, .menu_item{
+    margin: auto;
+    border-style: unset;
+    background-color: unset;
 }
 
 .topnav {
@@ -118,4 +125,12 @@ li img:hover {
     font-size: larger;
     color: antiquewhite;
     text-shadow: -2px 0 black, 2px 0 black, 0 -2px black, 0 2px black;
+}
+
+.food {
+    font-size: x-large;
+}
+
+.fdetails {
+    font-size: larger;
 }
