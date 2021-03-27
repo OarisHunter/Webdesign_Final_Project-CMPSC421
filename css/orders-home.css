@@ -45,6 +45,10 @@ section div {
     justify-content: center;
 }
 
+a {
+    text-decoration: none;
+}
+
 #tot_header {
     font-family: Luminari, fantasy;
     text-align: center;
@@ -81,6 +85,7 @@ section div {
     text-align: center;
     padding: 13px;
     font-size: large;
+    text-decoration: none;
 }
 
 .topnav a:hover {
