@@ -61,7 +61,7 @@ a {
     margin: auto;
 }
 
-#order_menu, .menu_item{
+#order_menu, div.menu_item section {
     margin: auto;
     border-style: unset;
     background-color: unset;
