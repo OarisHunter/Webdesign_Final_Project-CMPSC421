@@ -53,6 +53,8 @@ table  {
   margin-top:100px;
     margin-left: 500px;
     margin-right: auto;
+    color: white;
+    text-shadow: -1px 0 black, 2px 0 black, 0 -1px black, 0 2px black;
 }
 caption {
     border: 1px solid white;
