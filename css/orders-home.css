@@ -43,6 +43,12 @@ a {
     text-decoration: none;
 }
 
+label {
+    font-family: Luminari, fantasy;
+    color: antiquewhite;
+    text-shadow: -2px 0 black, 2px 0 black, 0 -2px black, 0 2px black;
+}
+
 #tot_header {
     font-family: Luminari, fantasy;
     text-align: center;
