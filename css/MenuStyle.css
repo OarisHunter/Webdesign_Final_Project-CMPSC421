@@ -1,0 +1,195 @@
+body{
+    background-image: url("../images/tot.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Luminari, fantasy;
+    color: white;
+    text-shadow: -1px 0 black, 2px 0 black, 0 -2px black, 0 2px black;
+}
+
+
+
+
+
+#navsec {
+    background-color: darkred;
+    border-style: solid;
+    border-color: white;
+}
+
+.nav_menu {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    background-color: darkred;
+    text-decoration: none;
+    padding: 16px;
+}
+
+.nav_menu a {
+    display: block;
+    font-family: Luminari, fantasy;
+    background-color: antiquewhite;
+    text-shadow: -1px 0 black, 2px 0 black, 0 -1px black, 0 2px black;
+    color: white;
+    text-align: center;
+    padding: 13px;
+    font-size: large;
+    text-decoration: none;
+}
+
+.nav_menu a:hover {
+    background-color: white;
+    color: antiquewhite;
+    transition-duration: 0.2s
+}
+
+.nav_menu a.nav_page {
+    background-color: white;
+    font-size: x-large;
+    color: antiquewhite;
+}
+
+.nav_items:hover {
+    background-color: white;
+}
+
+.nav_items:hover {
+    background-color: white;
+}
+
+#tot_header {
+    font-family: Luminari, fantasy;
+    text-align: center;
+    font-size: 75px;
+    color: white;
+    text-shadow: -1px 0 black, 2px 0 black, 0 -1px black, 0 2px black;
+}
+
+
+
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#menuhead{
+    font-size: xxx-large;
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+    text-decoration: underline;
+}
+
+.food{
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.fdetails{
+    padding-left: 25%;
+    padding-right: 20%;
+}
+
+#head{
+    border-bottom: 3px solid antiquewhite;
+    border-top: 10px solid antiquewhite;
+    border-right: 10px solid antiquewhite;
+    border-left: 10px solid antiquewhite;
+    background: darkred;
+    text-align: center;
+    margin-right: 20%;
+    margin-left: 20%;
+    margin-top: 2%;
+}
+
+#Apps{
+    border-bottom: 3px solid antiquewhite;
+    border-top: 3px solid antiquewhite;
+    border-right: 10px solid antiquewhite;
+    border-left: 10px solid antiquewhite;
+    background: darkred;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+#Healthy{
+    border-bottom: 3px solid antiquewhite;
+    border-top: 3px solid antiquewhite;
+    border-right: 10px solid antiquewhite;
+    border-left: 10px solid antiquewhite;
+    background: darkred;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+#Entrees{
+    border-bottom: 3px solid antiquewhite;
+    border-top: 3px solid antiquewhite;
+    border-right: 10px solid antiquewhite;
+    border-left: 10px solid antiquewhite;
+    background: darkred;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+#Sandwich{
+    border-bottom: 3px solid antiquewhite;
+    border-top: 3px solid antiquewhite;
+    border-right: 10px solid antiquewhite;
+    border-left: 10px solid antiquewhite;
+    background: darkred;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+#Seafood{
+    border-bottom: 3px solid antiquewhite;
+    border-top: 3px solid antiquewhite;
+    border-right: 10px solid antiquewhite;
+    border-left: 10px solid antiquewhite;
+    background: darkred;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+#sides{
+    text-align: center;
+    border-bottom: 3px solid antiquewhite;
+    border-top: 3px solid antiquewhite;
+    border-right: 10px solid antiquewhite;
+    border-left: 10px solid antiquewhite;
+    background: darkred;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+#drinks{
+    text-align: center;
+    border-bottom: 10px solid antiquewhite;
+    border-top: 3px solid antiquewhite;
+    border-right: 10px solid antiquewhite;
+    border-left: 10px solid antiquewhite;
+    background: darkred;
+    margin-right: 20%;
+    margin-left: 20%;
+    margin-bottom: 2%;
+}
+
+#contact_info {
+    width: 160px;
+    margin: 0 auto;
+}
+
+.contact {
+    text-align: center;
+    color: white;
+    text-shadow: -1px 0 black, 2px 0 black, 0 -1px black, 0 2px black;
+}
