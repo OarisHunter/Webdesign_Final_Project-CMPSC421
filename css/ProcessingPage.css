@@ -119,3 +119,8 @@ li img:hover {
   color: antiquewhite;
   text-shadow: -2px 0 black, 2px 0 black, 0 -2px black, 0 2px black;
 }
+
+#email
+{
+  float right;
+}
