@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TOT</title>
+    <link rel="stylesheet" type="text/css" href="homepage.css">
+</head>
+<body>
+
+<!-- Restaurant Title -->
+<h1 id="tot_header">T O T</h1>
+
+<!-- Navigation Menu -->
+<section class="nav_menu">
+    <a class="nav_page">Home</a>
+    <a>Menu</a>
+    <a>Order</a>
+    <a>Rewards</a>
+    <a>Order Status</a>
+</section>
+
+<!-- Tater Tot Dishes Slideshow -->
+<div class="main_body">
+    <p class="quotes">"We make the top tot in town!"</p>
+    <div class="tots_slideshow">
+        <li class="tot_item"><span><img class="tot_pic" src="images/tots3.jpg" alt="tot_pic"></span></li>
+        <li class="tot_item"><span><img class="tot_pic" src="images/tots.jpg" alt="tot_pic"></span></li>
+        <li class="tot_item"><span><img class="tot_pic" src="images/tots4.jpg" alt="tot_pic"></span></li>
+        <li class="tot_item"><span><img class="tot_pic" src="images/tots2.jpg" alt="tot_pic"></span></li>
+        <li class="tot_item"><span><img class="tot_pic" src="images/tots5.jpg" alt="tot_pic"></span></li>
+        <li class="tot_item"><span><img class="tot_pic" src="images/tots7.jpg" alt="tot_pic"></span></li>
+        <li class="tot_item"><span><img class="tot_pic" src="images/tots6.jpg" alt="tot_pic"></span></li>
+        <li class="tot_item"><span><img class="tot_pic" src="images/tots8.jpg" alt="tot_pic"></span></li>
+    </div>
+    <p class="quotes">"Every tot made with love."</p>
+</div>
+
+<!-- Auto Slideshow Logic -->
+<script>
+    let index = 0;
+    slideshow();
+
+    function slideshow()
+    {
+        let tot_pic = document.getElementsByClassName("tot_item");
+
+        for (let i = 0; i < tot_pic.length; i++) {
+            tot_pic[i].style.display = "none";
+        }
+        index++;
+
+        // if last picture reached, loop back
+        if (index > tot_pic.length) {
+            index = 1;
+        }
+
+        tot_pic[index-1].style.display = "block";
+        setTimeout(slideshow, 3250);  // 3.25s wait time
+    }
+</script>
+
+<!-- Contact Information -->
+<div id="contact_info">
+    <p class="contact">tot@netcentric.com<br>123-456-7890</p>
+</div>
+
+<!-- Location View -->
+<div>
+    <p class="contact">Location of TOT Central:</p>
+    <iframe id="location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6958.416462967641!2d165.96804350456728!3d-50.6036995145136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa9b37960d3cdddd7%3A0xbd1bca4ab10f2187!2sDisappointment%20Island!5e0!3m2!1sen!2sus!4v1616548453505!5m2!1sen!2sus"></iframe>
+</div>
+
+</body>
+</html>
