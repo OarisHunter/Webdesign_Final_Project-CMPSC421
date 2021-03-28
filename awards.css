@@ -13,24 +13,37 @@ body{
     font-family:  Luminari, fantasy;
     background-size: cover;
 }
-nav {
+
+.topnav {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto auto;
     background-color: darkred;
     padding: 16px;
-
 }
-.nav_bar {
+
+.topnav a {
     display: block;
     font-family: Luminari, fantasy;
     background-color: antiquewhite;
-    text-align: center;
-    color: white;
     text-shadow: -1px 0 black, 2px 0 black, 0 -1px black, 0 2px black;
+    color: white;
+    text-align: center;
     padding: 13px;
+    font-size: larger;
+    text-decoration: none;
 }
-.nav_bar:hover {
+
+.topnav a:hover {
     background-color: white;
+    color: antiquewhite;
+
+    transition-duration: 0.2s;
+}
+
+.topnav a.active_page {
+    background-color: white;
+    font-size: x-large;
+    color: antiquewhite;
 }
 
 #points_label
