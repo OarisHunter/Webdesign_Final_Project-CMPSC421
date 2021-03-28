@@ -48,6 +48,8 @@ cart_modal_btn.onclick = function () {
     cart_elements = populateCartModal(order);
     // Populate order input field
     inputOrder(order);
+    // Fill Cart Total Element
+    populateCartTotal(order);
     // Show modal
     cart_modal.style.display = "block";
 }
@@ -163,4 +165,26 @@ function inputOrder(order) {
 
     // Stringify order for input field to preserve array format
     order_input.value = JSON.stringify(order);
+}
+
+function populateCartTotal(order) {
+    var total_field = document.getElementById("cart_order_total");
+    var total = 0;
+
+    // Calculate order total (all prices are the same currently)
+    for(var i =0; i < order.length; i++) {
+        total += 20.35;
+    }
+
+    // Fix floating point precision
+    total = total.toFixed(2)
+
+    // Check for if cart is empty
+    if(total == 0) {
+        total_field.textContent = "Total: $0.00";
+    }
+    else {
+        total_field.textContent = "Total: $" + total;
+    }
+    return total;
 }
