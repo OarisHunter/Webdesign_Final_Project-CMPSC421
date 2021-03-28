@@ -66,7 +66,7 @@ section div {
 
 .topnav {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto;
   background-color: darkred;
   /*padding-left: 16px;*/
   /*padding-right: 16px;*/
