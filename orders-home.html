@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TOT: Place an Order!</title>
+    <link rel="stylesheet" type="text/css" href="css/orders-home.css">
+    <script src="js/orders-home.js" async></script>
+</head>
+<body>
+
+<!-- Page Header -->
+<h1 id="tot_header">T O T</h1>
+
+<h1>Online Order</h1>
+
+<p>
+    Place an Order Online!
+</p>
+
+<!-- Nav Bar -->
+<section class="topnav">
+    <a>Home</a>
+    <a>Menu</a>
+    <a class="active_page">Order</a>
+    <a>Rewards</a>
+    <a>Order Status</a>
+</section>
+
+<br>
+
+<!-- Cart Icon -->
+<button class="cart" id="cart_icon">
+    <img class="cart_img" src="./images/basket-cart-icon.png" alt="cart_image">
+</button>
+
+<!-- Cart Modal -->
+<div class="modal" id="cart_modal">
+    <!-- Modal content -->
+    <div class="modal_content">
+        <!-- Modal Header -->
+        <div class="modal_header">
+            <span class="close">&times;</span>
+            <h2>Your Cart:</h2>
+        </div>
+        <!-- Modal Body -->
+        <div class="modal_body">
+            <div style="display: flex">
+                <p style="flex: 50%; font-size: xx-large">Item:</p>
+                <p style="flex: 50%; font-size: xx-large">Quantity:</p>
+            </div>
+        </div>
+        <!-- Modal Footer -->
+        <div class="modal_footer">
+            <form name="checkout_form" action="" method="post">
+                <!-- Hidden Field for Order -->
+                <label for="checkout_order"></label>
+                <input type="hidden" id="checkout_order" name="checkout_order" required>
+                <div class="modal_checkout">
+                    <p id="cart_order_total">Total: $20.35</p>
+                    <div>
+                        <!-- Field for email to be tied to order -->
+                        <label for="checkout_email">Email:</label>
+                        <input type="email" id="checkout_email" name="checkout_email" required>
+                        <button type="submit" value="checkout" class="checkout_button">Checkout</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<br>
+
+<!-- Jump to Category container -->
+<section id="order_categories">
+    <div>
+        <h2>
+            Categories
+        </h2>
+
+        <ul class="category_list">
+            <li><a href="#apps"><span><img class="category_img" src="./images/tots2.jpg" alt="placeholder">
+                <span class="category_text">Early Tots</span></span></a></li>
+            <li><a href="#healthy"><span><img class="category_img" src="./images/tots5.jpg" alt="placeholder">
+                <span class="category_text">Healthy Options</span></span></a></li>
+            <li><a href="#entrees"><span><img class="category_img" src="./images/tots3.jpg" alt="placeholder">
+                <span class="category_text">Entrees</span></span></a></li>
+            <li><a href="#sandwich"><span><img class="category_img" src="./images/tots6.jpg" alt="placeholder">
+                <span class="category_text">Sandwiches</span></span></a></li>
+            <li><a href="#seafood"><span><img class="category_img" src="./images/tots4.jpg" alt="placeholder">
+                <span class="category_text">Seafood</span></span></a></li>
+            <li><a href="#sides"><span><img class="category_img" src="images/tots_sides.jpg" alt="placeholder">
+                <span class="category_text">Sides</span></span></a></li>
+            <li><a href="#drinks"><span><img class="category_img" src="images/drinks.png" alt="placeholder">
+                <span class="category_text">Drinks</span></span></a></li>
+        </ul>
+    </div>
+</section>
+
+<br><br>
+
+<!-- Menu Container -->
+<section id="order_menu">
+    <div class="menu">
+        <section id="apps">
+            <h2>Early Tots:</h2>
+            <div class="menu_item">
+                <section class="menu_item_column">
+                    <p class="food">Buffalo Tots: <span>$20.35</span></p>
+                    <p class="fdetails">Choice of mild, hot, or BBQ</p>
+                </section>
+                <button class="cart_button" value=1 onclick="addToCart(this.value)">Add to Cart</button>
+            </div>
+            <div class="menu_item">
+                <section class="menu_item_column">
+                    <p class="food">Tots in a blanket: <span>$20.35</span></p>
+                    <p class="fdetails">Wrapped in bacon and sausage</p>
+                </section>
+                <button class="cart_button" value="2" onclick="addToCart(this.value)">Add to Cart</button>
+            </div>
+            <div class="menu_item">
+                <section class="menu_item_column">
+                    <p class="food">Loaded Tots: <span>$20.35</span></p>
+                    <p class="fdetails">Covered in bacon, shredded cheese, and sour cream</p>
+                </section>
+                <button class="cart_button" value="3" onclick="addToCart(this.value)">Add to Cart</button>
+            </div>
+            <div class="menu_item">
+                <section class="menu_item_column">
+                    <p class="food">Tot Nachos: <span>$20.35</span></p>
+                    <p class="fdetails">Covered in Cheese, Guacamole, Sour Cream,<br> Shredded Beef, Onion, Lettuce, Tomato</p>
+                </section>
+                <button class="cart_button" value="4" onclick="addToCart(this.value)">Add to Cart</button>
+            </div>
+            <div class="menu_item">
+                <section class="menu_item_column">
+                    <p class="food">Beer Fried Tots: <span>$20.35</span></p>
+                    <p class="fdetails">Fried with beer batter, served with beer cheese</p>
+                </section>
+                <button class="cart_button" value="5" onclick="addToCart(this.value)">Add to Cart</button>
+            </div>
+        </section>
+
+        <br>
+
+        <section id="healthy">
+            <h2>Healthy Options:</h2>
+            <div class="menu_item">
+                <section class="menu_item_column">
+                    <p class="food">True tater salad: <span>$20.35</span></p>
+                    <p class="fdetails">Handful of Iceberg lettuce, tomatoes, cheese,<br> carrots, tater croutons</p>
+                </section>
+                <button class="cart_button" value="6" onclick="addToCart(this.value)">Add to Cart</button>
+            </div>
+            <div class="menu_item">
+                <section class="menu_item_column">
+                    <p class="food">Reverse tater salad:  <span>$20.35</span></p>
+                    <p class="fdetails">Handful of Tater croutons, tomatoes, cheese,<br> carrots, pinch of Iceberg lettuce</p>
+                </section>
+                <button class="cart_button" value="7" onclick="addToCart(this.value)">Add to Cart</button>
+            </div>
+            <div class="menu_item">
+                <section class="menu_item_column">
+                    <p class="food">Grilled chicken tater salad:  <span>$20.35</span></p>
+                    <p class="fdetails">Seasoned chicken, handful of Iceberg lettuce,<br> tomatoes, cheese, carrots, tater croutons</p>
+                </section>
+                <button class="cart_button" value="8" onclick="addToCart(this.value)">Add to Cart</button>
+            </div>
+            <div class="menu_item">
+                <section class="menu_item_column">
+                    <p class="food">Tiny tater salad: <span>$20.35</span></p>
+                    <p class="fdetails">Pinch of: iceberg lettuce, tomato, cheese, carrots,<br> tater croutons </p>
+                </section>
+                <button class="cart_button" value="9" onclick="addToCart(this.value)">Add to Cart</button>
+            </div>
+            <div class="menu_item">
+                <section class="menu_item_column">
+                    <p class="food">Singular tot:  <span>$20.35</span></p>
+                    <p class="fdetails">Only vegan option</p>
+                </section>
+                <button class="cart_button" value="10" onclick="addToCart(this.value)">Add to Cart</button>
+            </div>
+        </section>
+
+        <br>
+
+        <section id="entrees">
+            <h2>Entrees:</h2>
+            <div class="menu_item">
+                <section class="menu_item_column">
+                    <p class="food">Chicken Tot Pie: <span>$20.35</span></p>
+                    <p class="fdetails">Creamy filling, carrots, peas, shredded chicken</p>
+                </section>
+                <button class="cart_button" value="11" onclick="addToCart(this.value)">Add to Cart</button>
+            </div>
+            <div class="menu_item">
+                <section class="menu_item_column">
+                    <p class="food">Pulled Pork Tots: <span>$20.35</span></p>
+                    <p class="fdetails">Bed of tots with half pound smoked pulled pork</p>
+                </section>
+                <button class="cart_button" value="12" onclick="addToCart(this.value)">Add to Cart</button>
+            </div>
+            <div class="menu_item">
+                <section class="menu_item_column">
+                    <p class="food">Steak and Tots: <span>$20.35</span></p>
+                    <p class="fdetails">8 oz sirloin topped with a fried egg</p>
+                </section>
+                <button class="cart_button" value="13" onclick="addToCart(this.value)">Add to Cart</button>
+            </div>
+            <div class="menu_item">
+                <section class="menu_item_column">
+                    <p class="food">Tot Burrito: <span>$20.35</span></p>
+                    <p class="fdetails">Shredded Beef and Pork, guacamole, salsa, cheese,<br> iceberg lettuce, hot sauce</p>
+                </section>
+                <button class="cart_button" value="14" onclick="addToCart(this.value)">Add to Cart</button>
+            </div>
+            <div class="menu_item">
+                <section class="menu_item_column">
+                    <p class="food">Tot tacos: <span>$20.35</span></p>
+                    <p class="fdetails">Choice of Shredded Beef or Pork, with iceberg lettuce,<br> cheese, and hot sauce</p>
+                </section>
+                <button class="cart_button" value="15" onclick="addToCart(this.value)">Add to Cart</button>
+            </div>
+            <div class="menu_item">
+                <section class="menu_item_column">
+                    <p class="food">Tater Pizza: <span>$20.35</span></p>
+                    <p class="fdetails">Red sauce, mozzarella, pepperoni, sausage </p>
+                </section>
+                <button class="cart_button" value="16" onclick="addToCart(this.value)">Add to Cart</button>
+            </div>
+            <div class="menu_item">
+                <section class="menu_item_column">
+                    <p class="food">Chicken Fried tots: <span>$20.35</span></p>
+                    <p class="fdetails">Sweet and Sour chicken, rice, egg, peas, carrots,<br> side of soy sauce</p>
+                </section>
+                <button class="cart_button" value="17" onclick="addToCart(this.value)">Add to Cart</button>
+            </div>
+        </section>
+
+        <br>
+
+        <section id="sandwich">
+            <h2>Sandwiches:</h2>
+            <div class="menu_item">
+                <section class="menu_item_column">
+                    <p class="food">Classic Tater burger:  <span>$20.35</span></p>
+                    <p class="fdetails">½ lb beef patty, American cheese, iceberg lettuce, tomato</p>
+                </section>
+                <button class="cart_button" value="18" onclick="addToCart(this.value)">Add to Cart</button>
+            </div>
+            <div class="menu_item">
+                <section class="menu_item_column">
+                    <p class="food">The Big Tater burger:  <span>$20.35</span></p>
+                    <p class="fdetails">½ lb beef patty, beer cheese, shredded pork,<br> and 3 tots in a blanket</p>
+                </section>
+                <button class="cart_button" value="19" onclick="addToCart(this.value)">Add to Cart</button>
+            </div>
+            <div class="menu_item">
+                <section class="menu_item_column">
+                    <p class="food">Tater Roma:  <span>$20.35</span></p>
+                    <p class="fdetails">Hoagie roll, pepperoni, bacon, ham, mozzarella,<br> iceberg lettuce, olive oil</p>
+                </section>
+                <button class="cart_button" value="20" onclick="addToCart(this.value)">Add to Cart</button>
+            </div>
+            <div class="menu_item">
+                <section class="menu_item_column">
+                    <p class="food">Philly Cheese Tater:  <span>$20.35</span></p>
+                    <p class="fdetails">Hoagie roll, philly steak, beer cheese, iceberg lettuce,<br> tomato, ranch</p>
+                </section>
+                <button class="cart_button" value="21" onclick="addToCart(this.value)">Add to Cart</button>
+            </div>
+        </section>
+
+        <br>
+
+        <section id="seafood">
+            <h2>Seafood:</h2>
+            <div class="menu_item">
+                <section class="menu_item_column">
+                    <p class="food">Captain Tot:  <span>$20.35</span></p>
+                    <p class="fdetails">Tater wrapped Atlantic cod with side of tartar sauce</p>
+                </section>
+                <button class="cart_button" value="22" onclick="addToCart(this.value)">Add to Cart</button>
+            </div>
+            <div class="menu_item">
+                <section class="menu_item_column">
+                    <p class="food">The seven Tots: <span>$20.35</span></p>
+                    <p class="fdetails">7 taters filled with chopped shrimp and cream cheese sauce</p>
+                </section>
+                <button class="cart_button" value="23" onclick="addToCart(this.value)">Add to Cart</button>
+            </div>
+        </section>
+
+        <br>
+
+        <section id="sides">
+            <h2>Sides:</h2>
+            <div class="menu_item">
+                <section class="menu_item_column">
+                    <p class="food">Tots: <span>$20.35</span></p>
+                    <p class="fdetails"> </p>
+                </section>
+                <button class="cart_button" value="24" onclick="addToCart(this.value)">Add to Cart</button>
+            </div>
+            <div class="menu_item">
+                <section class="menu_item_column">
+                    <p class="food">Tater Chips: <span>$20.35</span></p>
+                    <p class="fdetails"> </p>
+                </section>
+                <button class="cart_button" value="25" onclick="addToCart(this.value)">Add to Cart</button>
+            </div>
+            <div class="menu_item">
+                <section class="menu_item_column">
+                    <p class="food">Hash Browns: <span>$20.35</span></p>
+                    <p class="fdetails"> </p>
+                </section>
+                <button class="cart_button" value="26" onclick="addToCart(this.value)">Add to Cart</button>
+            </div>
+            <div class="menu_item">
+                <section class="menu_item_column">
+                    <p class="food">Waffle Tots: <span>$20.35</span></p>
+                    <p class="fdetails"><br></p>
+                </section>
+                <button class="cart_button" value="27" onclick="addToCart(this.value)">Add to Cart</button>
+            </div>
+        </section>
+
+        <br>
+
+        <section id="drinks">
+            <h2>Drinks:</h2>
+            <div class="menu_item">
+                <section class="menu_item_column">
+                    <p class="food">Bottled Water: <span>$20.35</span></p>
+                    <p class="fdetails">Dasani</p>
+                </section>
+                <button class="cart_button" value="28" onclick="addToCart(this.value)">Add to Cart</button>
+            </div>
+            <div class="menu_item">
+                <section class="menu_item_column">
+                    <p class="food">Soda Water: <span>$20.35</span></p>
+                    <p class="fdetails">Coca-Cola</p>
+                </section>
+                <button class="cart_button" value="29" onclick="addToCart(this.value)">Add to Cart</button>
+            </div>
+            <div class="menu_item">
+                <section class="menu_item_column">
+                    <p class="food">Coors Light: <span>$20.35</span></p>
+                    <p class="fdetails">Canned<p>
+                </section>
+                <button class="cart_button" value="30" onclick="addToCart(this.value)">Add to Cart</button>
+            </div>
+        </section>
+    </div>
+</section>
+
+<div id="contact_info">
+    <p class="contact">tot@netcentric.com<br>123-456-7890</p>
+</div>
+
+</body>
+</html>
