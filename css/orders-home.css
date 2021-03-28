@@ -10,11 +10,11 @@ body {
 
 h1 {
     font-family: Luminari, fantasy;
-    font-size: 48px;
+    font-size: 75px;
     text-align: center;
     color: white;
     text-shadow: -2px 0 black, 2px 0 black, 0 -2px black, 0 2px black;
-    margin: unset;
+    /*margin: unset;*/
 }
 
 h2 {

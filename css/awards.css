@@ -14,6 +14,12 @@ body{
     background-size: cover;
 }
 
+section {
+    background-color: darkred;
+    border-style: solid;
+    border-color: white;
+}
+
 .topnav {
     display: grid;
     grid-template-columns: auto auto auto auto auto;
