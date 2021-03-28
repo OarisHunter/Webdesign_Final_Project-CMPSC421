@@ -24,6 +24,14 @@ h2 {
   text-shadow: -2px 0 black, 2px 0 black, 0 -2px black, 0 2px black;
 }
 
+h3 {
+  font-family: Luminari, fantasy;
+  font-size: 36px;
+  text-align: center;
+  color: antiquewhite;
+  text-shadow: -2px 0 black, 2px 0 black, 0 -2px black, 0 2px black;
+}
+
 p {
   font-family: Luminari, fantasy;
   font-size: 24px;
