@@ -40,21 +40,22 @@
     let index = 0;
     slideshow();
 
-    function slideshow() {
-        let i;
+    function slideshow()
+    {
         let tot_pic = document.getElementsByClassName("tot_item");
 
-        for (i = 0; i < tot_pic.length; i++) {
+        for (let i = 0; i < tot_pic.length; i++) {
             tot_pic[i].style.display = "none";
         }
         index++;
 
+        // if last picture reached, loop back
         if (index > tot_pic.length) {
             index = 1;
         }
 
         tot_pic[index-1].style.display = "block";
-        setTimeout(slideshow, 3250);
+        setTimeout(slideshow, 3250);  // 3.25s wait time
     }
 </script>
 
