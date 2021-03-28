@@ -11,14 +11,21 @@ body {
     text-shadow: -1px 0 black, 2px 0 black, 0 -1px black, 0 2px black;
 }
 
-#navigation {
-    display: grid;
-    grid-template-columns: 33% 34% 33%;
+section {
     background-color: darkred;
+    border-style: solid;
+    border-color: antiquewhite;
+}
+
+.nav_menu {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    background-color: darkred;
+    text-decoration: none;
     padding: 16px;
 }
 
-.nav_items {
+.nav_menu a {
     display: block;
     font-family: Luminari, fantasy;
     background-color: antiquewhite;
@@ -26,10 +33,20 @@ body {
     color: white;
     text-align: center;
     padding: 13px;
+    font-size: large;
+    text-decoration: none;
 }
 
-.nav_items:hover {
+.nav_menu a:hover {
     background-color: white;
+    color: antiquewhite;
+    transition-duration: 0.2s
+}
+
+.nav_menu a.nav_page {
+    background-color: white;
+    font-size: x-large;
+    color: antiquewhite;
 }
 
 .main_body {
