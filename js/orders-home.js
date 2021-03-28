@@ -172,15 +172,15 @@ function populateCartTotal(order) {
     var total = 0;
 
     // Calculate order total (all prices are the same currently)
-    for(var i =0; i < order.length; i++) {
-        total += 20.35;
+    for(var i = 0; i < order.length; i++) {
+        total += order[i][1] * 20.35;
     }
 
     // Fix floating point precision
     total = total.toFixed(2)
 
     // Check for if cart is empty
-    if(total == 0) {
+    if(total === 0) {
         total_field.textContent = "Total: $0.00";
     }
     else {
