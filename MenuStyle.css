@@ -3,6 +3,7 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     font-family: Luminari, fantasy;
     color: white;
     text-shadow: -1px 0 black, 2px 0 black, 0 -2px black, 0 2px black;
@@ -10,33 +11,60 @@ body{
 
 
 
+
+
+#navsec {
+    background-color: darkred;
+    border-style: solid;
+    border-color: white;
+}
+
+.nav_menu {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    background-color: darkred;
+    text-decoration: none;
+    padding: 16px;
+}
+
+.nav_menu a {
+    display: block;
+    font-family: Luminari, fantasy;
+    background-color: antiquewhite;
+    text-shadow: -1px 0 black, 2px 0 black, 0 -1px black, 0 2px black;
+    color: white;
+    text-align: center;
+    padding: 13px;
+    font-size: large;
+    text-decoration: none;
+}
+
+.nav_menu a:hover {
+    background-color: white;
+    color: antiquewhite;
+    transition-duration: 0.2s
+}
+
+.nav_menu a.nav_page {
+    background-color: white;
+    font-size: x-large;
+    color: antiquewhite;
+}
+
+.nav_items:hover {
+    background-color: white;
+}
+
+.nav_items:hover {
+    background-color: white;
+}
+
 #tot_header {
     font-family: Luminari, fantasy;
     text-align: center;
     font-size: 75px;
     color: white;
-}
-
-#navigation {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    background-color: darkred;
-    padding-left: 16px;
-    padding-right: 16px;
-}
-
-.nav_items {
-    display: block;
-    font-family: Luminari, fantasy;
-    background-color: antiquewhite;
-    text-shadow: -1px 0 black, 1px 0 black, 0 -1px black, 0 1px black;
-    color: white;
-    text-align: center;
-    padding: 13px;
-}
-
-.nav_items:hover {
-    background-color: white;
+    text-shadow: -1px 0 black, 2px 0 black, 0 -1px black, 0 2px black;
 }
 
 
