@@ -19,7 +19,7 @@ section {
 
 .nav_menu {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto;
     background-color: darkred;
     text-decoration: none;
     padding: 16px;
