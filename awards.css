@@ -1,0 +1,95 @@
+h1{
+
+    text-align: center;
+    font-size: 75px;
+    color: white;
+    text-shadow: -1px 0 black, 2px 0 black, 0 -1px black, 0 2px black;
+}
+
+
+
+body{
+    background-image: url("https://cdn.discordapp.com/attachments/808443370736320523/823596944227041390/tots.jpg");
+    font-family:  Luminari, fantasy;
+    background-size: cover;
+}
+
+.topnav {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    background-color: darkred;
+    padding: 16px;
+}
+
+.topnav a {
+    display: block;
+    font-family: Luminari, fantasy;
+    background-color: antiquewhite;
+    text-shadow: -1px 0 black, 2px 0 black, 0 -1px black, 0 2px black;
+    color: white;
+    text-align: center;
+    padding: 13px;
+    font-size: larger;
+    text-decoration: none;
+}
+
+.topnav a:hover {
+    background-color: white;
+    color: antiquewhite;
+
+    transition-duration: 0.2s;
+}
+
+.topnav a.active_page {
+    background-color: white;
+    font-size: x-large;
+    color: antiquewhite;
+}
+
+#points_label
+{
+    font-family: Luminari, fantasy;
+    text-align: right;
+    color: white;
+    text-shadow: -1px 0 black, 2px 0 black, 0 -1px black, 0 2px black;
+
+}
+p span {
+    background-color: darkred;
+}
+
+
+table  {
+
+    border: 1px solid white;
+    background-color: darkred;
+    font-family: Luminari, fantasy;
+    margin-top:100px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    text-shadow: -1px 0 black, 2px 0 black, 0 -1px black, 0 2px black;
+}
+caption {
+    border: 1px solid white;
+    background-color: darkred;
+}
+
+.Add_to_cart
+{
+
+
+
+}
+#login{
+    float: right;
+    padding-right: 30px;
+
+}
+
+label{
+    background-color: darkred;
+    color: white;
+    text-shadow: -1px 0 black, 2px 0 black, 0 -1px black, 0 2px black;
+
+}
