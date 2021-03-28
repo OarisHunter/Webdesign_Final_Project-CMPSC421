@@ -247,11 +247,19 @@ li img:hover {
 
 .modal_content {
     background-color: antiquewhite;
-    margin: 15% auto;
+    margin: 2% auto;
     padding: 20px;
     border-style: solid;
     border-color: black;
     width: 60%;
+}
+
+.modal_cart_item {
+    display: flex;
+}
+
+.modal_cart_item p {
+    flex: 50%;
 }
 
 .modal_checkout {
