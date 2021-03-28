@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <title>TOT: Place an Order!</title>
     <link rel="stylesheet" type="text/css" href="css/orders-home.css">
+    <script src="js/orders-home.js" async></script>
 </head>
 <body>
 
+<!-- Page Header -->
 <h1 id="tot_header">T O T</h1>
 
 <h1>Online Order</h1>
@@ -15,6 +17,7 @@
     Place an Order Online!
 </p>
 
+<!-- Nav Bar -->
 <section class="topnav">
     <a>Home</a>
     <a>Menu</a>
@@ -22,12 +25,45 @@
     <a>Rewards</a>
 </section>
 
-<div class="cart_div">
+<br>
+
+<!-- Cart Icon -->
+<button class="cart" id="cart_icon">
     <img class="cart_img" src="./images/basket-cart-icon.png" alt="cart_image">
+</button>
+
+<!-- Cart Modal -->
+<div class="modal" id="cart_modal">
+    <!-- Modal content -->
+    <div class="modal_content">
+        <!-- Modal Header -->
+        <div class="modal_header">
+            <span class="close">&times;</span>
+            <h2>Your Cart:</h2>
+        </div>
+        <!-- Modal Body -->
+        <div class="modal_body">
+            <p>Item 1</p>
+            <p>Item 2</p>
+            <p>Item 3</p>
+        </div>
+        <!-- Modal Footer -->
+        <div class="modal_footer">
+            <div class="modal_checkout">
+                <p>Total: $20.35</p>
+                <div>
+                    <label for="checkout_email">Email:</label>
+                    <input type="text" id="checkout_email">
+                    <button class="checkout_button">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-<br><br>
+<br>
 
+<!-- Jump to Category container -->
 <section id="order_categories">
     <div>
         <h2>
@@ -55,6 +91,7 @@
 
 <br><br>
 
+<!-- Menu Container -->
 <section id="order_menu">
     <div class="menu">
         <section id="apps">
