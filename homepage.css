@@ -14,7 +14,7 @@ body {
 section {
     background-color: darkred;
     border-style: solid;
-    border-color: antiquewhite;
+    border-color: white;
 }
 
 .nav_menu {
@@ -33,7 +33,7 @@ section {
     color: white;
     text-align: center;
     padding: 13px;
-    font-size: large;
+    font-size: larger;
     text-decoration: none;
 }
 
