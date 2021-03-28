@@ -108,7 +108,7 @@ a {
 
 .topnav {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto;
     background-color: darkred;
     padding: 16px;
 }
