@@ -41,19 +41,29 @@ var cart_elements = [];
 
 // Calls
 cart_modal_btn.onclick = function () {
+    // convert items added to cart to
+    // [[item index, frequency], [item index, frequency], ...]
     var order = getOrder(cart);
+    // Populate modal with html elements
     cart_elements = populateCartModal(order);
+    // Populate order input field
+    inputOrder(order);
+    // Show modal
     cart_modal.style.display = "block";
 }
 
 modal_close.onclick = function () {
+    // Hide modal
     cart_modal.style.display = "none";
+    // Clear elements from modal
     clearCartModal(cart_elements);
 }
 
 window.onclick = function (event) {
     if (event.target === cart_modal) {
+        // Hide modal
         cart_modal.style.display = "none";
+        // Clear elements from modal
         clearCartModal(cart_elements);
     }
 }
@@ -62,6 +72,7 @@ window.onscroll = function() {cartScroll()};
 
 // Functions
 function cartScroll() {
+    // Fix cart icon to top of screen when scrolling
     if(window.pageYOffset > sticky) {
         cart_modal_btn.classList.add("fixed_cart");
     }
@@ -72,6 +83,7 @@ function cartScroll() {
 
 function addToCart(value) {
     console.log("Pushing: " + menu[value] + " to cart | Menu Index: " + value);
+    // Push cart item index to cart array
     cart.push(value);
 }
 
@@ -124,9 +136,12 @@ function populateCartModal(order) {
         cart_item_cont.appendChild(cart_item_quant);
         modal_body.appendChild(cart_item_cont);
 
+        // Append element to list of elements
         cart_elements.push([cart_item_cont, [cart_item, cart_item_quant]]);
     }
 
+    // Return list of document elements in the cart following the format:
+    // [ [ Cart Item Container, [ Cart Item Name, Cart Item Quantity ] ] ]
     return cart_elements;
 }
 
@@ -134,9 +149,18 @@ function clearCartModal(cart_elements) {
     var modal_body = document.getElementsByClassName("modal_body")[0];
 
     for(var i = 0; i < cart_elements.length; i++) {
+        // Remove Cart item name and quantity elements
         cart_elements[i][0].removeChild(cart_elements[i][1][0]);
         cart_elements[i][0].removeChild(cart_elements[i][1][1]);
 
+        // Remove cart item container
         modal_body.removeChild(cart_elements[i][0]);
     }
+}
+
+function inputOrder(order) {
+    var order_input = document.getElementById("checkout_order");
+
+    // Stringify order for input field to preserve array format
+    order_input.value = JSON.stringify(order);
 }

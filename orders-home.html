@@ -50,13 +50,17 @@
         </div>
         <!-- Modal Footer -->
         <div class="modal_footer">
-            <form method="get">
+            <form name="checkout_form" action="" method="post">
+                <!-- Hidden Field for Order -->
+                <label for="checkout_order">Order:</label>
+                <input type="hidden" id="checkout_order" name="checkout_order" required>
                 <div class="modal_checkout">
                     <p>Total: $20.35</p>
                     <div>
+                        <!-- Field for email to be tied to order -->
                         <label for="checkout_email">Email:</label>
-                        <input type="text" id="checkout_email">
-                        <button type="submit" class="checkout_button">Checkout</button>
+                        <input type="email" id="checkout_email" name="checkout_email" required>
+                        <button type="submit" value="checkout" class="checkout_button">Checkout</button>
                     </div>
                 </div>
             </form>
@@ -104,7 +108,7 @@
                     <p class="food">Buffalo Tots: <span>$20.35</span></p>
                     <p class="fdetails">Choice of mild, hot, or BBQ</p>
                 </section>
-                <button class="cart_button" value="1" onclick="addToCart(this.value)">Add to Cart</button>
+                <button class="cart_button" value=1 onclick="addToCart(this.value)">Add to Cart</button>
             </div>
             <div class="menu_item">
                 <section class="menu_item_column">
