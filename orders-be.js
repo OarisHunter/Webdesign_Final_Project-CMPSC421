@@ -21,7 +21,8 @@ db.on('error',console.error.bind(console, 'MongoDB connection error: '));
 var orderSchema = mongoose.Schema({
     email: String,
     order: Object,
-    orderStatus: Number
+    orderStatus: Number,
+    total: Number
 });
 
 var Customer = new mongoose.model('Customers', orderSchema);
@@ -32,21 +33,23 @@ app.post('/Process_Order', CORS(), (req, res) => {
     var email = req.body.email;
     var order = JSON.parse(req.body.order);
     var orderStatus = req.body.orderStatus;
+    var total = req.body.total;
 
     console.log("Email: " + email);
     console.log("Order: ");
     console.log(order);
     console.log("OrderStatus: " + orderStatus);
+    console.log("Total: " + total);
 
     for(var i = 0; i < Object.keys(order).length; i++) {
         var key = Object.keys(order)[i];
         console.log("Key: " + key + " | Value: " + order[key]);
     }
 
-    Customer.create({email: email, order: order, orderStatus: orderStatus});
+    Customer.create({email: email, order: order, orderStatus: orderStatus, total: total});
 
     res.send("Order received and inserted into database");
-    console.log("Inserted order under email: " + email + " into database");
+    console.log("Inserted order totaling " + total + " under email: " + email + " into database");
 });
 
 app.listen(3000,()=>{
