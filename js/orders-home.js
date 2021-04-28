@@ -38,6 +38,7 @@ var menu =  {
 
 var cart = [];
 var cart_elements = [];
+var total = 0;
 
 // Calls
 cart_modal_btn.onclick = function () {
@@ -49,7 +50,7 @@ cart_modal_btn.onclick = function () {
     // Populate order input field
     inputOrder(order);
     // Fill Cart Total Element
-    populateCartTotal(order);
+    total = populateCartTotal(order);
     // Show modal
     cart_modal.style.display = "block";
 }
@@ -84,7 +85,7 @@ function post_checkout() {
 
     var email = document.getElementById("checkout_email").value;
     var order = document.getElementById("checkout_order").value;
-    var data = {email: email, order: order, orderStatus: 0};
+    var data = {email: email, order: order, orderStatus: 0, total: total};
 
     console.log(data);
 
@@ -197,8 +198,9 @@ function populateCartTotal(order) {
     var total = 0;
 
     // Calculate order total (all prices are the same currently)
-    for(var i = 0; i < order.length; i++) {
-        total += order[i][1] * 20.35;
+    for(var i = 0; i < Object.keys(order).length; i++) {
+        var k = Object.keys(order)[i];
+        total += order[k] * 20.35;
     }
 
     // Fix floating point precision
