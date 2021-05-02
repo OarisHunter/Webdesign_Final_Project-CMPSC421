@@ -19,38 +19,43 @@
 
 <body>
 
-    <p></p>
-    <section id = "login">
-         <label for="email">Email: </label>
-         <input type ="text" id ="email" >
-         <button>Enter</button>
-         <br><p  id = points_label><span>Reward points:</span></p>
+<p></p>
+<section id = "login">
+    <label for="email">Email: </label>
+    <input type ="text" id ="email" named = "email" >
+    <button onclick="send()"k>Enter</button>
 
-       </section>
+    <br><p  id = "points_label">Reward points:</p>  <p id ="points">0</p>
 
- <table>
+</section>
 
-            <caption>Claim your rewards!!!</caption>
+<table>
+
+    <caption>Claim your rewards!!!</caption>
 
 
-        <tr>
-            <td>Regular Tots: 50 Points</td>
-            <td><button class="Add_to_cart">Add to cart</button></td>
-        </tr>
-        <tr>
-            <td>Tater Chips: 100 Points </td>
-            <td><button class="Add_to_cart">Add to cart</button></td>
-        </tr>
-        <tr>
-            <td>Hash Brown: 150 Points</td>
-            <td><button class="Add_to_cart">Add to cart</button></td>
-        </tr>
-        <tr>
-            <td>Waffle Tots: 150 Points</td>
-            <td><button class="Add_to_cart">Add to cart</button></td>
-        </tr>
+    <tr>
+        <td>Regular Tots: 50 Points</td>
+        <td><button class="Add_to_cart" value ="24" onclick="addToCart1(this.value)">Add to cart</button></td>
+    </tr>
+    <tr>
+        <td>Tater Chips: 100 Points </td>
+        <td><button class="Add_to_cart"value ="25" onclick="addToCart2(this.value)">Add to cart</button></td>
+    </tr>
+    <tr>
+        <td>Hash Brown: 150 Points</td>
+        <td><button class="Add_to_cart"value ="26" onclick="addToCart3(this.value)">Add to cart</button></td>
+    </tr>
+    <tr>
+        <td>Waffle Tots: 150 Points</td>
+        <td><button class="Add_to_cart" value ="27" onclick="addToCart4(this.value)">Add to cart</button></td>
+    </tr>
+    <tr>
 
-    </table>
+        <td ><button id ="submit"  onclick="sendOrder()">Submit Order</button></td>
+    </tr>
+
+</table>
 
 
 
