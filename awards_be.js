@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(CORS());
 
 
-mongoose.connect("mongodb://localhost:27017/cat", {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect("mongodb://localhost:27017/TOT", {useNewUrlParser: true, useUnifiedTopology: true});
 
 var db = mongoose.connection;
 var hold
@@ -70,6 +70,6 @@ app.post('/send', CORS(), (req, res) => {
     res.send(JSON.stringify(hold))
 });
 
-app.listen(3000,()=>{
+app.listen(3002,()=>{
     console.log("App is running and listening");
 });
