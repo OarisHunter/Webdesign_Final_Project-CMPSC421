@@ -11,9 +11,9 @@ app.use(CORS());
 mongoose.connect("mongodb://localhost:27017/TOT", {useNewUrlParser: true, useUnifiedTopology: true});
 
 var db = mongoose.connection;
-var hold
+var hold;
+var cemail;
 db.on('error',console.error.bind(console, "MongoDB connection error:"));
-
 
 var orderSchema = mongoose.Schema({
     email: String,
@@ -22,12 +22,14 @@ var orderSchema = mongoose.Schema({
     total: Number
 });
 
+var Customer = new mongoose.model('Customers', orderSchema);
+
 // sends the order Prosessing page
 app.post('/Process_Order', CORS(), (req, res) => {
     var email = req.body.email;
     var order = JSON.parse(req.body.order);
     var orderStatus = req.body.orderStatus;
-    var total = req.body.total;
+    var total = 0;
 
     console.log("Email: " + email);
     console.log("Order: ");
@@ -45,28 +47,29 @@ app.post('/Process_Order', CORS(), (req, res) => {
     res.send("Order received and inserted into database");
     console.log("Inserted order totaling " + total + " under email: " + email + " into database");
 });
-var Customer = new mongoose.model('Customers', orderSchema);
-var cemail ;
 
 // Recieves email from awards
-app.get('/awards', CORS(), (req, res) => {
-    cemail = req.body.email
+app.post('/awards', CORS(), (req, res) => {
+    cemail = req.body.email;
 
+    //counts the number of times the email was used for orders
+    Customer.find({email: cemail}, function (err, doc){
+        try {
+
+            console.log(doc.length)
+            hold = doc.length
+
+        } catch (g) {
+            console.error("bad");
+        }
+    });
+
+    res.send("email received");
 });
-//counts the number of times the email was used for orders
-Customer.find({email: cemail}, function (err, doc){
-    try {
 
-        console.log(doc.length)
-        hold = doc.length
-    } catch (g) {
-        console.error("bad");
-    }
-
-});
 
 // sends the number of emails to fe
-app.post('/send', CORS(), (req, res) => {
+app.post('/get', CORS(), (req, res) => {
     console.log("Request from Frontend for JSON");
 
     res.send(JSON.stringify(hold))
