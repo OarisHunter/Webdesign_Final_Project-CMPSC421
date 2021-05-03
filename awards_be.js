@@ -22,6 +22,7 @@ var orderSchema = mongoose.Schema({
     total: Number
 });
 
+// sends the order Prosessing page
 app.post('/Process_Order', CORS(), (req, res) => {
     var email = req.body.email;
     var order = JSON.parse(req.body.order);
@@ -45,13 +46,14 @@ app.post('/Process_Order', CORS(), (req, res) => {
     console.log("Inserted order totaling " + total + " under email: " + email + " into database");
 });
 var Customer = new mongoose.model('Customers', orderSchema);
-Customer.create({email:"a@pat"});
+var cemail ;
 
-
+// Recieves email from awards
 app.get('/awards', CORS(), (req, res) => {
     cemail = req.body.email
 
 });
+//counts the number of times the email was used for orders
 Customer.find({email: cemail}, function (err, doc){
     try {
 
@@ -63,7 +65,7 @@ Customer.find({email: cemail}, function (err, doc){
 
 });
 
-
+// sends the number of emails to fe
 app.post('/send', CORS(), (req, res) => {
     console.log("Request from Frontend for JSON");
 
