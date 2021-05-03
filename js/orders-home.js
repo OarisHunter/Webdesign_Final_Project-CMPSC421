@@ -38,6 +38,7 @@ var menu =  {
 
 var cart = [];
 var cart_elements = [];
+var total = 0;
 
 // Calls
 cart_modal_btn.onclick = function () {
@@ -49,7 +50,7 @@ cart_modal_btn.onclick = function () {
     // Populate order input field
     inputOrder(order);
     // Fill Cart Total Element
-    populateCartTotal(order);
+    total = populateCartTotal(order);
     // Show modal
     cart_modal.style.display = "block";
 }
@@ -73,6 +74,26 @@ window.onclick = function (event) {
 window.onscroll = function() {cartScroll()};
 
 // Functions
+function post_checkout() {
+    var XHR = new XMLHttpRequest();
+
+    XHR.onreadystatechange = function() {
+        if(this.readyState == 4 && this.status == 200) {
+            console.log("Sending order to backend");
+        }
+    }
+
+    var email = document.getElementById("checkout_email").value;
+    var order = document.getElementById("checkout_order").value;
+    var data = {email: email, order: order, orderStatus: 0, total: total};
+
+    console.log(data);
+
+    XHR.open("POST", "http://localhost:3000/Process_Order");
+    XHR.setRequestHeader("Content-Type",'application/json');
+    XHR.send(JSON.stringify(data));
+}
+
 function cartScroll() {
     // Fix cart icon to top of screen when scrolling
     if(window.pageYOffset > sticky) {
@@ -106,11 +127,12 @@ function getOrder(cart) {
         prev = cart[i];
     }
 
-    var order = [];
-    // Create array of "tuples" containing
-    // (item index, frequency of item)
+    var order = {};
+    // DEPRECATED: Create array of "tuples" containing
+    // Create Dictionary containing
+    // item index: frequency of item
     for(var j = 0; j < items.length; j++) {
-        order.push([items[j], freq[j]]);
+        order[items[j]] = freq[j];
     }
     console.log(order);
     return order;
@@ -120,7 +142,8 @@ function populateCartModal(order) {
     var modal_body = document.getElementsByClassName("modal_body")[0];
 
     var cart_elements = [];
-    for(var i = 0; i < order.length; i++) {
+    // for(var i = 0; i < order.length; i++) {
+    for(var i = 0; i < Object.keys(order).length; i++) {
         // Create elements for modal body
         var cart_item_cont = document.createElement('div');
         var cart_item = document.createElement('p');
@@ -130,8 +153,11 @@ function populateCartModal(order) {
         cart_item_cont.setAttribute('class', 'modal_cart_item');
 
         // Give item container elements their text
-        cart_item.textContent = menu[order[i][0]];  // Menu Item
-        cart_item_quant.textContent = order[i][1];              // Quantity
+        // cart_item.textContent = menu[order[i][0]];  // Menu Item
+        // cart_item_quant.textContent = order[i][1];  // Quantity
+        var key = Object.keys(order)[i];
+        cart_item.textContent = menu[key];  // Menu Item
+        cart_item_quant.textContent = order[key];  // Quantity
 
         // Set Children
         cart_item_cont.appendChild(cart_item);
@@ -172,8 +198,9 @@ function populateCartTotal(order) {
     var total = 0;
 
     // Calculate order total (all prices are the same currently)
-    for(var i = 0; i < order.length; i++) {
-        total += order[i][1] * 20.35;
+    for(var i = 0; i < Object.keys(order).length; i++) {
+        var k = Object.keys(order)[i];
+        total += order[k] * 20.35;
     }
 
     // Fix floating point precision
