@@ -31,7 +31,13 @@ var menu =  {
   30 : "Coors Light"
 }
 
-var acart = [];
+var acart = {};
+cart_quantity= {
+  0: 1,
+  1: 1,
+  2: 1,
+  3: 1
+}
 var points
 
 
@@ -42,11 +48,11 @@ function send(){
   var XHR = new XMLHttpRequest();
   XHR.onreadystatechange =function (req,req) {
     if(this.status == 200 && this.readyState==4) {
+        console.log(this.responseText);
     }
-
   }
   var cemail= document.getElementById("email").value;
-  XHR.open("POST", "http://localhost:3002/Process_Order");
+  XHR.open("POST", "http://localhost:3002/awards");
   XHR.setRequestHeader("Content-Type",'application/json');
   XHR.send(JSON.stringify({email:cemail}));
   get();
@@ -60,14 +66,13 @@ function get() {
     if(this.readyState == 4 && this.status == 200) {
       var hold = this.response;
       hold = hold * 50;
-      document.getElementById("points").textContent = hold
+      document.getElementById("points").textContent = hold;
       console.log(this.responseText);
     }
   }
 
-  XHR.open("GET", "http://localhost:3002/get");
+  XHR.open("POST", "http://localhost:3002/get");
   XHR.send()
-
 }
 
 
@@ -79,8 +84,10 @@ function addToCart1(value) {
   if(points<50)
     return 0;
 
-  else
-    cart.push(value);
+  else {
+    acart[value] = cart_quantity[0];
+    cart_quantity[0] += 1;
+  }
   points = points - 50;
   points.toString()
   document.getElementById("points").textContent = points
@@ -94,8 +101,10 @@ function addToCart2(value) {
   if(points<100)
     return 0;
 
-  else
-    cart.push(value);
+  else {
+    acart[value] = cart_quantity[1];
+    cart_quantity[1] += 1;
+  }
   points = points - 100;
   points.toString()
   document.getElementById("points").textContent = points
@@ -110,8 +119,10 @@ function addToCart3(value) {
   if(points<150)
     return 0;
 
-  else
-    cart.push(value);
+  else {
+    acart[value] = cart_quantity[2];
+    cart_quantity[2] += 1;
+  }
   points = points - 150;
   points.toString()
   document.getElementById("points").textContent = points
@@ -126,8 +137,10 @@ function addToCart4(value) {
   if(points<150)
     return 0;
 
-  else
-    cart.push(value);
+  else {
+    acart[value] = cart_quantity[3];
+    cart_quantity[3] += 1;
+  }
   points = points - 150;
   points.toString()
   document.getElementById("points").textContent = points
@@ -145,7 +158,8 @@ function sendOrder()  {
 
   var email = document.getElementById("email").value;
 
-  var data = {email: email, order: acart, orderStatus: 0, total: 0};
+  var order = JSON.stringify(acart);
+  var data = {email: email, order: order, orderStatus: 0, total: 0};
 
   console.log(data);
 

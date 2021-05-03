@@ -22,9 +22,11 @@
 
 <p></p>
 <section id = "login">
-    <label for="email">Email: </label>
-    <input type ="text" id ="email" named = "email" >
-    <button onclick="send()">Enter</button>
+    <form name="login_form" action="" method="post">
+        <label for="email">Email: </label>
+        <input type ="text" id ="email" name = "email" >
+        <button type="button" onclick="send()">Enter</button>
+    </form>
 
     <br><p  id = "points_label">Reward points:</p>  <p id ="points">0</p>
 
