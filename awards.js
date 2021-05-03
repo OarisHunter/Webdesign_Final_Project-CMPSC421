@@ -65,7 +65,7 @@ function get() {
     }
   }
 
-  XHR.open("GET", "http://localhost:3000/get");
+  XHR.open("GET", "http://localhost:3002/get");
   XHR.send()
 
 }
@@ -149,7 +149,7 @@ function sendOrder()  {
 
   console.log(data);
 
-  XHR.open("POST", "http://localhost:3000/Process_Order");
+  XHR.open("POST", "http://localhost:3002/Process_Order");
   XHR.setRequestHeader("Content-Type",'application/json');
   XHR.send(JSON.stringify(data));
 
