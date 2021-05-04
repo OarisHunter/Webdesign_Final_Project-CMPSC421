@@ -41,38 +41,15 @@ app.get('/get/order/status', CORS(), async (req, res) => {
 
     let email = req.query.email
     console.log(email);
-    let orders = await Order.find({
-        email: email
+    let emails = await Order.find({
+        emails: email
     });
-    if (orders && orders.length) {
-        res.send(orders[0]);
+
+    if (emails && emails.length) {
+        res.send(emails[0]);
         return;
     }
     res.send({});
-
-    //console.log(orderName)
-    /*
-    let yourOrder = await Order.find({
-        "name": orderName
-    });
-
-    const currentTime = new Date().valueOf();
-    let timeLeftInMs =  (parseInt(yourOrder.timeOrderMade) + parseInt(yourOrder.timeUntilDone)) - currentTime
-    const minutesLeft = Math.floor(timeLeftInMs / 60) % 60
-
-    timeLeftInMs -= minutesLeft * 60;
-
-    let message = 0
-    if (timeLeftInMs > 0) {
-        message = timeLeftInMs
-    }
-*/
-    /*
-    console.log(myOrder);
-    res.send(myOrder);
-    */
-    //res.send({orderName: orderName, timeLeft: 10})
-
 
 })
 
