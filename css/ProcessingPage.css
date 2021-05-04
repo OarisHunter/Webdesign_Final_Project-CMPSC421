@@ -3,8 +3,9 @@ body {
   display: flex;
   flex-direction: column;
   /*align-items: center;*/
-  background-image: url("../images/TatorTot.jpg");
+  background-image: url("../images/tot.jpg");
   background-size: cover;
+  background-attachment: fixed;
 }
 
 h1 {
