@@ -32,7 +32,7 @@
     </h2>
 
     <h3>
-      Your order of <span id="orderName"></span> is currently: <span id="timeLeft"></span>
+      Your order of <span id="orderName"></span> is currently: <span id="orderStatus"></span>
     </h3>
 
 
@@ -40,11 +40,12 @@
 
   </div>
 </section>
+<script src="./js/processingpage.js"></script>
 <section id="email1">
   <label for="email">Email: </label>
   <input type="text" id="email">
-  <button>Enter</button>
+  <button onclick="getOrderStatus();">Enter</button>
 </section>
 </body>
-<script src="./js/processingpage.js"></script>
+
 </html>
