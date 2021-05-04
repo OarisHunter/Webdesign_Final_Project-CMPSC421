@@ -17,7 +17,7 @@ db.on('error',console.error.bind(console, 'MongoDB connection error:'));
 
 var orderSchema = new mongoose.Schema({
     email: String,
-    order: String,
+    order: Object,
     orderStatus: Number,
     total: Number
 });
