@@ -29,14 +29,11 @@ function getOrderStatus() {
 }
 
 function getOrderStatusString(statusNumber) {
-  if (statusNumber == 1) {
+  if (statusNumber == 0) {
+    return "Cooking";
+  } else if(statusNumber == 1) {
     return "Completed";
-  } else if(statusNumber == 2) {
-    return "In Cooking";
   }
   return "Unknown";
 }
 
-window.onload = function () {
-  // getOrderStatus()
-}
