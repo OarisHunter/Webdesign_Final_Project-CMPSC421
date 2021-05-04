@@ -22,7 +22,8 @@ var orderSchema = new mongoose.Schema({
     total: Number
 });
 
-var Order = mongoose.model('Orders', orderSchema);
+var Order = new mongoose.model('Customers', orderSchema);
+// var Order = mongoose.model('Orders', orderSchema);
 //__________________________________________________________________________________________
 app.get('/createOrder', async(req, res) => {
     let order = new Order({email: 'benjamin@gmail.com', order:{
@@ -41,15 +42,16 @@ app.get('/get/order/status', CORS(), async (req, res) => {
 
     let email = req.query.email
     console.log(email);
+
     let emails = await Order.find({
-        emails: email
+        email: email
     });
 
-    if (emails && emails.length) {
+    if (email && emails.length) {
         res.send(emails[0]);
         return;
     }
-    res.send({});
+    res.send(JSON.stringify(email));
 
 })
 
