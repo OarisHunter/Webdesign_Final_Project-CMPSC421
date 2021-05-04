@@ -32,18 +32,20 @@
     </h2>
 
     <h3>
-      Your order of ... is currently: ...
+      Your order of <span id="orderName"></span> is currently: <span id="orderStatus"></span>
     </h3>
 
 
     </ul>
 
   </div>
-  </section>
-<section id = "email1">
-<label for="email">Email: </label>
-<input type ="text" id ="email" >
-<button>Enter</button>
+</section>
+<script src="./js/processingpage.js"></script>
+<section id="email1">
+  <label for="email">Email: </label>
+  <input type="text" id="email">
+  <button onclick="getOrderStatus();">Enter</button>
 </section>
 </body>
+
 </html>
